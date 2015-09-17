@@ -1,4 +1,4 @@
-str = "Heute ist freitag!!!"
+str = "Die Woche besteht aus:\n\tMontag\n\tDienstag."
 
 puts str
 
@@ -15,7 +15,7 @@ puts "#{str} der #{zahl}. im Monat"
 tag = "Freitag"
 puts "Heute ist #{tag}, der #{Time.new}."
 
-3. times | do
+3. times do
 puts str
 	
 end

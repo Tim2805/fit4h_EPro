@@ -1,0 +1,37 @@
+Definition
+	class Movie
+			....
+	end
+	Eine Klassendefiniton wird mit dem Schlüsselwort <class> begonnen
+	und endet mit dem Schlüsselwort <end>
+	Eine Klasse ist eine Art von Bauplan für einen Gegenstand der mit Programmcode dargestellt werden soll.
+
+Aufruf:
+	obj_movie01 = Movie.new
+		#obj_movie01 ist eine Variable, die ein Objekt vom Typ Movie enthält. Dieses Objekt enthält alle Eigenschaften die in der Klasse Movie definiert wurden.
+		#Ein Objekt wird erzeugt, idem der Klassenname, gefolgt von dem Schlüsselwort <new> eingegeben wird.
+
+	Konstruktor
+	# Der Konstruktor wird jedes mal aufgerufen, wenn ein neues Objekt erzeugt wird (var = Movie.new)
+	# In Hintergrund wird in der Klasse eine Methode mit dem Namen "initialize" gesucht und der dort stehende Code ausgeführt
+		def initialize(ptitle,prank=0)
+ 			@title = ptitle.capitalize
+ 			@rank = prank
+ 		end
+ 		In diesem Fall wird bei einem Aufruf von: Movie.new('Turtles',3) in die Variable ptitle der Wert 'Turtles' gespeichert. Danach wird diesert Wert in deie Instanzvariable @title eingetragen. Das erzeugt Objekt hat nun eine Eigenschaft title.
+
+ 	Instanzvariable:
+ 		Die Instanzvariable einer Klasse gilt in jeder Methode der Klasse. Während also <ptitle nur innerhalb der Methode initialize gilt, kann die Instanzvariable <@title> auch in jeder anderen Methode der Klasse Movie verwendet werden.
+ 		Eine andere Bezeichnung für Instanzvariable ist Attribut oder Eigenschaft.
+
+ 	Eigenschaften:
+ 		Instanzvariablen sind in den meisten Fällen auch Eigenschaften, die das Objekt charakterisieren. Wen ich eine Eigenschaft ausgeben möchte 8von außen auf die Eigenschaft zugreife), dann muss ich eine Methode schreiben, die genauso wie die Eigenschaft heißt.
+ 		Bsp.:
+ 		Instanzvariable: @title
+ 		Eigenschaft: title
+ 		Reader-Methode:
+ 				def title
+ 				@title
+ 				end
+ 		Nun kann ich mit dem Objekt auf die Eigenschaft title zugreifen:
+ 		object1.title
