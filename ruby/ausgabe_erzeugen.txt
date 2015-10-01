@@ -1,0 +1,25 @@
+Soll auf der Konsole eine Ausgabe erzeugt werden, geschieht das über den Befehl 
+	puts <STRING>
+
+	puts "irgendwas"		#Ausgabe eines Strings	
+	puts variablenname  #Ausgabe einer Variable in der ein String ist
+	zahl = 15
+	puts zahl.to_s
+
+Zusammengesetzte Ausgabe:
+Ausgeben eines Strings, der sich aus Text und dem Inhalt von Variablen zusammensetzt
+
+tag = "Freitag"
+puts "Heute ist #{tag}, der #{Time.new}."
+	#Am Anfang und am Ende müssen doppelte Anführungszeichen stehen.
+	#innerhalb des Konstruktes #{} kann jeder Ruby-code ausgeführt werden. Es findet automatisch eine Konvertierung des Ergebnisses in einen String statt.
+
+Formatieren der Ausgabe:
+	puts "Die Woche besteht aus :\n\tMonatag\n\tFreitag."
+	#\n fügt einen Zeilenumbruch hinzu
+	# \t fügt einen Tabulatorschritt hinzu
+
+Zeichen escapen
+	puts "Anzeigen von \" muss das Zeichen escapt werden"
+	#Sollen bestimmte Zeichen wie doppelte oder einfache Anführungszeichen im Text dargestellt werden, dann muss ei Backfash vor diesem Zeichen stehen.
+	

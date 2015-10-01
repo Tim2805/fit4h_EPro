@@ -1,0 +1,111 @@
+1. Legen Sie ein Array an mit den Zahlen 15 bis 20 an.
+a. geben Sie diese Zahlen in einem Block aus
+b. geben Sie die Zahlen mit dem Index etwa so aus: Index: 0 - Wert: 15
+c. erzeugen Sie in einem Block einen Hash, wobei Sie die Arraywerte als Index nutzen und als Wert eine Zufallszahl zwischen 100 und 200 speichern. 
+d. Geben Sie diesen Hash anschließen etwa so aus: Index: 15 - Wert: 121
+
+
+Die Hash-Klasse
+Eine weitere nützliche Klasse ist die Klasse Hash. Hashes sind Arrays sehr ähnlich: sie haben viele Felder, die auf andere Objekte zeigen können. Im Array liegen diese Felder hinter einander und sind nummeriert (bei 0 anfangend). Im Hash sind diese Felder in keiner Reihenfolge (sie sind nur irgendwie da) und man kann jedes Objekt verwenden, um ein Feld anzusprechen. Ein typische Anwendungsfall liegt vor, wenn man eine Menge von Objekten verwalten will, aber keine Reihenfolge gegeben ist, zum Beispiel die Farben, die ich für verschiedene Teile in einem längeren Text verwenden könnte:
+
+farbArray = []  #  neues Array, wie Array.new
+farbHash  = {}  #  neues Has, wie Hash.new
+
+farbArray[0]         = 'rot'
+farbArray[1]         = 'grün'
+farbArray[2]         = 'blau'
+farbHash['string']  = 'rot'
+farbHash['zahlen']  = 'grün'
+farbHash['schlüssel'] = 'blau'
+
+farbArray.each do |farbe|
+  puts farbe
+end
+farbHash.each do |code, farbe|
+  puts code + ':  ' + farbe
+end
+rot
+grün
+blau
+schlüssel:  blau
+zahlen:  grün
+string:  rot
+Wenn ich im Beispiel ein Array verwende, muss ich mir merken, dass ich im Feld 0 die Farbe für Strings gespeichert habe, im Feld 1 die Farbe für Zahlen und so weiter. Einfacher geht's mit Hashes: Das Feld 'string' enthält die Farbe für Strings, das Feld 'zahlen' enthält die Farbe für Zahlen und das Feld 'schlüssel' enthält die Farbe für Ruby-Schlüsselwörter. Man muss sich nichts merken. Vielleicht hast du im Beispiel festgestellt, dass die Objekte im Hash nicht in derselben Reihenfolge ausgegeben wurden, in der wir sie hineingeschrieben haben. Arrays behalten die Reihenfolge bei, Hashes nicht.
+
+Obwohl es meist geschickt ist, Strings zu verwenden, um die Felder in einem Hash zu bezeichnen, kann man jedes Objekt von jeder Klasse verwenden, sogar Arrays oder andere Hashes (der Sinn ist dann vielleicht fraglich...):
+
+komisch = Hash.new
+komisch[12] = 'Affen'
+komisch[[]] = 'totale Leere'
+komisch[Time.new] = 'ich hab keine Zeit'
+Hashes und Arrays haben jeweils ihre Vorteile. Du musst selber entscheiden, was am besten zu deiner Situation passt.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+e. Ergänzen Sie die Ausgabe. Wenn der Wert größer als 150 ist, dann sieht die Ausgabe aus:  Index: 15 - Wert: 151. WOW
+f. Durchlaufen Sie das Array und speichern Sie die Quadratzahlen in einem Array
+g. ! Durchlaufen Sie das Array und speichern Sie die Quadratzahlen in einem Hash mit der Zahl als Schlüssel
+
+Zusatz Zahlen im Array und im Hash:
+a. Legen Sie ein Array an mit 10 Primzahlen. Die Ausgabe des Arrays erzeugt:
+	1 ist einstellig
+	3 ist einstellig
+	...
+	11 ist zweistellig
+  ...
+b. Legen Sie zur Übung einen Hash personen an, mit den keys vorname, nachname, stadt und den Werten Theo, Sommer, Lodz. Machen Sie eine Ausgabe, die 'vorname: Theo + neue Zeile' ausgibt
+c. Fortsetzung Aufgabe a: 
+Speichern Sie beim Durchlaufen des Arrays die Werte in einem Hash mit der Bezeichnung prims, sodass die jeweilige Primzahl den Schlüssel bildet und der Wert den Text 'ist einstellig', 'ist zweistellig'
+d. Sortieren Sie den Hash, sodass die Ausgabe folgendermaßen möglich wird:
+Einstellig: 1,3,5 ..
+Zweistellig: 11, 13, ..
+e. Fortsetzung Aufgabe b: 
+Speichern Sie den Hash in dem Array adressen und legen Sie zwei weitere Hashes personen mit den gleichen Keys und anderen Werten an. Durchlaufen Sie das Array, sodass folgende Ausgabe erfolgt.
+1.Person:
+Name: Theo
+Vorname: Sommer
+Stadt: Lodz
+2. Person:
+......
+
+2. Worte
+a. Bilde ein Array mit den Worten: Pflaume, Bauschaum, Auster
+b. Alle Element, die den String aus enthalten sollen ausgegeben werden.
+c. erzeugen eine Ausgabe nach der Länge der Worte von klein nach groß
+d. Ein Hash wird ausgegeben, das Wort als Index, die Anzahl der Buchstaben als Wert
+
+3. Lottogenerator:
+a. Schreiben Sie einen kleinen Lottozahlengenerator. Es sollen 7 Zahlen aus 49 Möglichkeiten in einem Array ausgegeben werden.
+b. Peter, Paul und Mary bilden einen Hash, etwa derart: lotto = { "Peter" => [ 2,22,33,11,23,32,26 ], ...}
+
+4. Vergleich:
+str_1 = "Programmieren, Federball, Whisky"
+str_2 = "Fussball, Bier, Programmieren"
+Die Ausgabe lautet:
+ergebnis = { :diff => ["Federball", "Whisky", "Fussball", "Bier"], :match => ["Programmieren"]}
