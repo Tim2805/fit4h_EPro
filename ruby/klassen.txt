@@ -35,6 +35,7 @@ Aufruf:
  				end
  		Nun kann ich mit dem Objekt auf die Eigenschaft title zugreifen:
  		object1.title
+<<<<<<< HEAD
 
  		Soll vo außen auf die Eignschaft title zugegriffen werden, dann ist ein WRITER nötig.
  		Writer-Methode:
@@ -47,3 +48,5 @@ Aufruf:
 
  		Kurz-kurz-Form: wenn sowohl ein Reader als auch ein Writer benötigt wird:
  			attr_accessor :title
+=======
+>>>>>>> f0206df23aaceae5252e3d55ea3982fff88b260c
