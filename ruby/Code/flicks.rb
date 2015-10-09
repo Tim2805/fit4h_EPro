@@ -1,41 +1,6 @@
-<<<<<<< HEAD
-class Playlist
-	def initialize(name)
-		@name = name
-		@movies = []
-	end
+require_relative 'movie'
+require_relative 'playlist'
 
-	def add_movie(movie)
-		@movies << movie
-	end
-	def play
-		puts "#{@name}'s PLAYLIST"
-		@movies.each do |movie|
-			puts movie
-		end
-	end
-	def to_s
-		@movies.size.to_s
-	end
-
-end
-
-class Movie
-		attr_accessor :title
-		def initialize(ptitle, prank=0)
-			@title = ptitle.capitalize
-			@rank = prank
-		end
-		def thumbs_up
-			@rank += 1
-		end
-		def thumbs_dowm
-			@rank -= 1
-		end
-		def to_s
-			"#{@title} hat ein Ranking von: #{@rank}."
-		end
-	end
 
 movie1 = Movie.new('NinjaTurtels',4)
 movie2 = Movie.new('45 years',8)
@@ -50,51 +15,36 @@ pl.play
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # movies = [movie1, movie2, movie3]
 # movies.each do |movie|
 # 		movie.thumbs_up
 # 		movie.thumbs_dowm
 # 		puts movie
 # end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -140,46 +90,46 @@ pl.play
 
 # movie1.title ="ninjaPurples"
 # puts movie1
-=======
-class Movie
-	def initialize(ptitle, prank=0)
-	@title = ptitle.capitalize
-	@rank = prank
-	end
 
-	# def title
-	# 	@title
-	# end
-	attr_reader:title
+# class Movie
+# 	def initialize(ptitle, prank=0)
+# 	@title = ptitle.capitalize
+# 	@rank = prank
+# 	end
 
-	# def title=(ptitle)
-	# 	@title = ptitle
-	# end
+# 	# def title
+# 	# 	@title
+# 	# end
+# 	attr_reader:title
 
-	attr_writer:title
-	def thumbs_up
-			@rank += 1
-			#@rank = @rank + 1
-	end
-	def thumbs_down
-			@rank -= 1
-	end
-	def to_s
-		"#{@title} hat ein Ranking von: #{@rank}."
-	end
+# 	# def title=(ptitle)
+# 	# 	@title = ptitle
+# 	# end
 
-end
+# 	attr_writer:title
+# 	def thumbs_up
+# 			@rank += 1
+# 			#@rank = @rank + 1
+# 	end
+# 	def thumbs_down
+# 			@rank -= 1
+# 	end
+# 	def to_s
+# 		"#{@title} hat ein Ranking von: #{@rank}."
+# 	end
 
-movie1 = Movie.new('Ninja Turtles',4)
-puts movie1.to_s
-movie1.thumbs_up
-puts movie1.to_s
+# end
 
-puts movie1.title
+# movie1 = Movie.new('Ninja Turtles',4)
+# puts movie1.to_s
+# movie1.thumbs_up
+# puts movie1.to_s
 
-movie1.title ="ninjaPurples"
-puts movie1
->>>>>>> f0206df23aaceae5252e3d55ea3982fff88b260c
+# puts movie1.title
+
+# movie1.title ="ninjaPurples"
+# puts movie1
+# >>>>>>> f0206df23aaceae5252e3d55ea3982fff88b260c
 
 
 

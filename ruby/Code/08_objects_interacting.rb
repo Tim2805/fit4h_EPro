@@ -17,59 +17,15 @@
 # 	Curly got w00ted!
 # 	Curly got w00ted!
 # 	I'm Curly with a health of 145 and a score of 150.
-class Game
-	def initialize(title)
-		@title = title
-		@player = []
-	end
-
-	def add_player(neu)
-		@player << neu
-		
-	end
-
-	def play
-		puts "#{@title}'s Game"
-		@player.each do |neu|
-			puts neu.to_s
-		end
-		@player.each do |aua|
-			puts aua.blam
-			puts aua.w00t
-			puts aua.w00t
-			puts aua.to_s
-	end
-end
-
-end
+require_relative '08_Game'
+require_relative '08_player'
 
 
 
 
 
-class Player
- 		def initialize(pname, phealth = 100)
- 			@name = pname
- 			@health = phealth
- 			@score = @health+@name.length
- 		end
 
- 
- 		def to_s
- 			"Ich bin #{@name} mit einem Wert von #{@health} und einem Score von #{@score}"
- 		end
 
- 		def blam
- 			@health -= 10
- 			"#{@name} wurde geblamt"
- 		end
-
- 		def w00t
- 			@health -= 10
- 			"#{@name} got w00ted"
- 		end
- 		
- end
 
 	player1=Player.new("Tim",100)
 	player2=Player.new("Marvin",60)
